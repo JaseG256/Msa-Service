@@ -1,0 +1,46 @@
+server:
+  port: 5050
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+  sleuth:
+    enabled: true
+    trace-id128: true
+    sampler:
+      probability: 1.0
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/fileService?useSSL=false
+    username: root
+    password: password
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging:
+  pattern:
+    level:
+  level:
+    root: DEBUG
+    com.netflix.discovery: INFO
+    org.springframework.cloud: DEBUG
+    org.hibernate.SQL: DEBUG
+
+dbfile:
+  dbfile_exception_message: File not found with id %s
+  dbfile_field_id: id
+  dbfile_resource_name: DBfile
+  dbfile.dbfile_field_name: DBfileName	
