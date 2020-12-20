@@ -57,7 +57,7 @@ role:
   role_field_name: roleName
 
 #RestTemplate
-restClient:
+rest-client:
   baseUrl: /api/v1/dbfile
   uploadFileUrl: /uploadFile
   fileName: fileName
