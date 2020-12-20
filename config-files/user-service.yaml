@@ -2,11 +2,6 @@ server:
   port: 8080
 
 spring:
-  sleuth:
-    enabled: true
-    trace-id128: true
-    sampler:
-      probability: 1.0
   jpa:
     show-sql: true
     hibernate:
