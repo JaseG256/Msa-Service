@@ -45,8 +45,8 @@ user:
   user_field_name: userName
   user_field_email: email
   user_delete_apiResponse_message: User successfully deleted - Id -
-  upload_image_success_message: User id: {} updated with dbFile fileName- {}
-  find_by_id_message: Finding user with Id: {}
+  upload_image_success_message: User id - {} updated with dbFile fileName- {}
+  find_by_id_message: Finding user with Id - {}
 
 #RoleService
 role:
