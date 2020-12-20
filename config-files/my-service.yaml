@@ -1,0 +1,31 @@
+server:
+  port: 8999
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:3306/userService?useSSL=false
+    username: root
+    password: password
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging:
+  pattern:
+    level:
+  level:
+    root: DEBUG
+    com.msa.jrg: DEBUG
+    com.netflix.discovery: INFO
+    org.springframework.cloud: DEBUG
+    org.hibernate.SQL: DEBUG
