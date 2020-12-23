@@ -11,51 +11,49 @@ spring:
     username: root
     password: password
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    statusPageUrlPath: /actuator/info
-    healthCheckUrlPath: /actuator/health
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    statusPageUrlPath: /actuator/info
+#    healthCheckUrlPath: /actuator/health
+#    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 logging:
   pattern:
     level:
   level:
     root: DEBUG
-    com.msa.jrg: INFO
-    com.netflix.discovery: INFO
-    org.springframework.cloud: DEBUG
+#    com.msa.jrg: DEBUG
+#    org.springframework.cloud: DEBUG
     org.hibernate.SQL: DEBUG
 
-user:
-  user_exception_message: Could not find user with Id -
-  user_field_id: id
-  user_resource_name: User
-  user_field_name: userName
-  user_field_email: email
-  user_delete_apiResponse_message: User successfully deleted - Id -
-  upload_image_success_message: User id - {} updated with dbFile fileName- {}
-  find_by_id_message: Finding user with Id - {}
-
-#RoleService
-role:
-  role_exception_message: Could not find user with Id -
-  role_delete_apiResponse_message: Role successfully deleted - Id -
-  role_resource_name: Role
-  role_field_id: id
-  role_field_name: roleName
-
-#RestTemplate
-rest-client:
-  baseUrl: /api/v1/dbfile
-  uploadFileUrl: /uploadFile
-  fileName: fileName
-  fileType: fileType
-  data: data
-  getFile: file
-  dbfile_service: DBFILE-SERVICE
-  dbfile_path: /api/v1/dbfile/**
-
+#user:
+#  user_exception_message: Could not find user with Id -
+#  user_field_id: id
+#  user_resource_name: User
+#  user_field_name: userName
+#  user_field_email: email
+#  user_delete_apiResponse_message: User successfully deleted - Id -
+#  upload_image_success_message: User id - {} updated with dbFile fileName- {}
+#  find_by_id_message: Finding user with Id - {}
+#
+##RoleService
+#role:
+#  role_exception_message: Could not find user with Id -
+#  role_delete_apiResponse_message: Role successfully deleted - Id -
+#  role_resource_name: Role
+#  role_field_id: id
+#  role_field_name: roleName
+#
+##RestTemplate
+#rest-client:
+#  baseUrl: /api/v1/dbfile
+#  uploadFileUrl: /uploadFile
+#  fileName: fileName
+#  fileType: fileType
+#  data: data
+#  getFile: file
+#  dbfile_service: DBFILE-SERVICE
+#  dbfile_path: /api/v1/dbfile/**
